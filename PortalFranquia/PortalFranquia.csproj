@@ -1,0 +1,1159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E3777D59-D739-4DC4-A89E-72D3D1C1B5B4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PortalFranquia</RootNamespace>
+    <AssemblyName>PortalFranquia</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ajaxtoolkit\vs2012 4.5\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Boleto.Net, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Boleto.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="CarSystem.Banco, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CarSystem.Banco.dll</HintPath>
+    </Reference>
+    <Reference Include="CarSystem.BancoDados, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CarSystem.BancoDados.dll</HintPath>
+    </Reference>
+    <Reference Include="CarSystem.Interfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CarSystem.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Carsystem.Tipos, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Carsystem.Tipos.dll</HintPath>
+    </Reference>
+    <Reference Include="CarSystem.Utilidades, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CarSystem.Utilidades.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="componentes\buscaCliente.ascx" />
+    <Content Include="componentes\OS\dadosCliente.ascx" />
+    <Content Include="componentes\OS\dadosClienteComplementares.ascx" />
+    <Content Include="componentes\OS\EncerrarOs.ascx" />
+    <Content Include="componentes\OS\mostraOSAbertas.ascx" />
+    <Content Include="componentes\OS\OSInternaExterna.ascx" />
+    <Content Include="componentes\OS\retornoCPFCNPJ.ascx" />
+    <Content Include="componentes\OS\selecionaInstalador.ascx" />
+    <Content Include="componentes\OS\trocaID.ascx" />
+    <Content Include="Compras\AdmFranquia.aspx" />
+    <Content Include="Compras\DetalhesPecas.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Contrato.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\Bordero.css" />
+    <Content Include="css\botoes.css" />
+    <Content Include="css\cbpHorizontalMenu.css" />
+    <Content Include="css\chamados.css" />
+    <Content Include="css\combo.css" />
+    <Content Include="css\comum.css" />
+    <Content Include="css\detalhesCompras.css" />
+    <Content Include="css\fullcalendar.css" />
+    <Content Include="css\Home.css" />
+    <Content Include="css\indexx.css" />
+    <Content Include="css\kEmail.css" />
+    <Content Include="css\kEstoque.css" />
+    <Content Include="css\kGrid.css" />
+    <Content Include="css\kModal.css" />
+    <Content Include="css\Login.css" />
+    <Content Include="css\mensagem.css" />
+    <Content Include="css\mostraOSAbertas.css" />
+    <Content Include="css\OrdemS.css" />
+    <Content Include="css\OS.css" />
+    <Content Include="css\produtos.css" />
+    <Content Include="css\RelatorioPagamento.css" />
+    <Content Include="css\resumoOS.css" />
+    <Content Include="css\Venda.css" />
+    <Content Include="css\Vourcher.css" />
+    <Content Include="Estoque\detalhes.aspx" />
+    <Content Include="Estoque\itensProtocolo.aspx" />
+    <Content Include="Estoque\movimentacao.aspx" />
+    <Content Include="Estoque\protocolo.aspx" />
+    <Content Include="Compras\FranquiaCompra.aspx" />
+    <Content Include="Compras\FranquiaEstoque.aspx" />
+    <Content Include="Compras\FranquiaPedido.aspx" />
+    <Content Include="Compras\FranquiaVenda.aspx" />
+    <Content Include="Estoque\solicitacoes.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Compras\HomeCompras.aspx" />
+    <Content Include="homeEstoque.aspx" />
+    <Content Include="imagens\boletobancario.jpg" />
+    <Content Include="imagens\Bordero\aceite.gif" />
+    <Content Include="imagens\Bordero\buscar.jpg" />
+    <Content Include="imagens\Bordero\cheque.jpg" />
+    <Content Include="imagens\Bordero\cheque2.jpg" />
+    <Content Include="imagens\Bordero\Cheques1.jpg" />
+    <Content Include="imagens\Bordero\recusar.gif" />
+    <Content Include="imagens\Bordero\vourcher.jpg" />
+    <Content Include="imagens\cadastroCliente.jpg" />
+    <Content Include="imagens\chamado\Abertas.jpg" />
+    <Content Include="imagens\chamado\aberto.jpg" />
+    <Content Include="imagens\chamado\Abrir.jpg" />
+    <Content Include="imagens\chamado\atender.jpg" />
+    <Content Include="imagens\chamado\canceladas.jpg" />
+    <Content Include="imagens\chamado\Chamado.jpg" />
+    <Content Include="imagens\chamado\Encerradas.jpg" />
+    <Content Include="imagens\chamado\encerrar.jpg" />
+    <Content Include="imagens\chamado\excluir.jpg" />
+    <Content Include="imagens\chamado\MenuChamado.jpg" />
+    <Content Include="imagens\chamado\salvar.jpg" />
+    <Content Include="imagens\Cliente\debitoAutomatico.png" />
+    <Content Include="imagens\Cliente\manutencao.jpg" />
+    <Content Include="imagens\Cliente\transferencia.jpg" />
+    <Content Include="imagens\Contrato.png" />
+    <Content Include="imagens\contrato2.jpg" />
+    <Content Include="imagens\Contrato2.png" />
+    <Content Include="imagens\documentos.png" />
+    <Content Include="imagens\movimentacao.png" />
+    <Content Include="imagens\OS\constatacaoPB.jpg" />
+    <Content Include="imagens\OS\instalacaoPB.jpg" />
+    <Content Include="imagens\OS\recallPB.jpg" />
+    <Content Include="imagens\OS\reinstalacaoPB.jpg" />
+    <Content Include="imagens\OS\retiradaPB.jpg" />
+    <Content Include="imagens\OS\revisaoPlusPB.jpg" />
+    <Content Include="imagens\OS\selecionar.png" />
+    <Content Include="imagens\OS\suportePB.jpg" />
+    <Content Include="imagens\OS\trocaIcone.jpg" />
+    <Content Include="imagens\OS\trocaPB.jpg" />
+    <Content Include="imagens\Tecnicos.jpg" />
+    <Content Include="imagens\TrocaProprietario.jpg" />
+    <Content Include="imagens\pesquisaHistorico.jpg" />
+    <Content Include="imagens\promocao.jpg" />
+    <Content Include="imagens\relatorios\botao.png" />
+    <Content Include="imagens\relatorios\btn_excel.png" />
+    <Content Include="imagens\download.png" />
+    <Content Include="imagens\email1.png" />
+    <Content Include="imagens\icone_boleto.gif" />
+    <Content Include="imagens\logo.bmp" />
+    <Content Include="imagens\serach.png" />
+    <Content Include="imagens\shopping_cart_accept.png" />
+    <Content Include="js\cbpHorizontalMenu.min.js" />
+    <Content Include="js\CetecRelatorio.js" />
+    <Content Include="js\combo.js" />
+    <Content Include="js\debitoAutomatico.js" />
+    <Content Include="js\Documentos.js" />
+    <Content Include="js\Jchamados.js" />
+    <Content Include="js\jquery.maskedinput.js" />
+    <Content Include="js\maskCpfCnpj.js" />
+    <Content Include="js\MaxLength.min.js" />
+    <Content Include="js\fullcalendar.min.js" />
+    <Content Include="js\historicoEquipamentos.js" />
+    <Content Include="js\javaEstoqueSolicitacoes.js" />
+    <Content Include="js\javaResumoOS.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.numeric.js" />
+    <Content Include="js\jquery.PrintArea.js" />
+    <Content Include="js\MaskedEditFix.js" />
+    <Content Include="js\moment.min.js" />
+    <Content Include="js\OrdemServico.js" />
+    <Content Include="js\OSsAbertas.js" />
+    <Content Include="js\util.js" />
+    <Content Include="js\Voucher.js" />
+    <Content Include="modulos\Agenda\Agenda.aspx" />
+    <Content Include="modulos\Chamado\Abertos.ascx" />
+    <Content Include="modulos\Chamado\canceladas.ascx" />
+    <Content Include="modulos\Chamado\Chamados.ascx" />
+    <Content Include="modulos\Chamado\DetalhesChamados.aspx" />
+    <Content Include="modulos\Chamado\EmAtendimento.ascx" />
+    <Content Include="modulos\Chamado\Encerradas.ascx" />
+    <Content Include="modulos\Chamado\Menu.aspx" />
+    <Content Include="modulos\Chamado\MeusChamados.ascx" />
+    <Content Include="modulos\Chamado\Reabertos.ascx" />
+    <Content Include="modulos\Chamado\WebForm1.aspx" />
+    <Content Include="modulos\Cliente\CadastroCliente.aspx" />
+    <Content Include="modulos\Cliente\Cliente.aspx" />
+    <Content Include="modulos\Cliente\Compras.aspx" />
+    <Content Include="modulos\Cliente\DebitoAutomatico.aspx" />
+    <Content Include="modulos\Cliente\Erro.aspx" />
+    <Content Include="modulos\Cliente\IncluirObservacoesCadastro.aspx" />
+    <Content Include="modulos\Cliente\OrdemServico.aspx" />
+    <Content Include="modulos\Cliente\PosicaoFinanceira.aspx" />
+    <Content Include="modulos\Cliente\Veiculo.aspx" />
+    <Content Include="modulos\OS\AberturaOs.aspx" />
+    <Content Include="modulos\OS\aprovaTroca.aspx" />
+    <Content Include="modulos\Cliente\CetecRelatorio.html" />
+    <Content Include="modulos\OS\Certificado.aspx" />
+    <Content Include="modulos\OS\DetalhesOs.aspx" />
+    <Content Include="modulos\OS\Encerrar.aspx" />
+    <Content Include="modulos\Cliente\EnderecoCliente.aspx" />
+    <Content Include="modulos\OS\funcoesResumoOS.aspx" />
+    <Content Include="modulos\OS\historicoEquipamento.aspx" />
+    <Content Include="modulos\OS\impressaoOS.aspx" />
+    <Content Include="modulos\OS\OrdemServico.aspx" />
+    <Content Include="modulos\OS\OSsAbertas.aspx" />
+    <Content Include="modulos\OS\OsServico.aspx" />
+    <Content Include="modulos\OS\promocoes.aspx" />
+    <Content Include="modulos\OS\ReciboEntrega.aspx" />
+    <Content Include="modulos\OS\resumoOS.aspx" />
+    <Content Include="modulos\OS\InformacoesOS.asmx" />
+    <Content Include="modulos\OS\documentos.aspx" />
+    <Content Include="modulos\Vendas\AdmBordero.aspx" />
+    <Content Include="modulos\Vendas\Boleto.aspx" />
+    <Content Include="modulos\Vendas\Bordero.aspx" />
+    <Content Include="modulos\Vendas\CorrigirCheques.aspx" />
+    <Content Include="modulos\Vendas\Informacao.aspx" />
+    <Content Include="modulos\Vendas\Informacoes.aspx" />
+    <Content Include="modulos\OS\tipoOS.aspx" />
+    <Content Include="modulos\Vendas\HomeVendas.aspx" />
+    <Content Include="imagens\add.png" />
+    <Content Include="imagens\agenda.jpg" />
+    <Content Include="imagens\ativar.png" />
+    <Content Include="imagens\buscar.png" />
+    <Content Include="imagens\b_edit.png" />
+    <Content Include="imagens\cabLogin.jpg" />
+    <Content Include="imagens\caixa.jpg" />
+    <Content Include="imagens\carregando.gif" />
+    <Content Include="imagens\cliente.jpg" />
+    <Content Include="imagens\compras.jpg" />
+    <Content Include="imagens\contrato.jpg" />
+    <Content Include="imagens\emEstoque.png" />
+    <Content Include="imagens\estoque.jpg" />
+    <Content Include="imagens\estoqueCompras.jpg" />
+    <Content Include="imagens\excluir.png" />
+    <Content Include="imagens\loginPrincipal.jpg" />
+    <Content Include="imagens\logo300.png" />
+    <Content Include="imagens\meusPedidos.jpg" />
+    <Content Include="imagens\minus.png" />
+    <Content Include="imagens\ordemDeServico.jpg" />
+    <Content Include="imagens\OS\AbrirOS.jpg" />
+    <Content Include="imagens\OS\constatacao.jpg" />
+    <Content Include="imagens\OS\instalacao.jpg" />
+    <Content Include="imagens\OS\OSAberta.jpg" />
+    <Content Include="imagens\OS\recall.jpg" />
+    <Content Include="imagens\OS\reinstalacao.jpg" />
+    <Content Include="imagens\OS\retirada.jpg" />
+    <Content Include="imagens\OS\revisaoPlus.jpg" />
+    <Content Include="imagens\OS\suporte.jpg" />
+    <Content Include="imagens\OS\troca.jpg" />
+    <Content Include="imagens\pedidoDeCompras.jpg" />
+    <Content Include="imagens\plus.png" />
+    <Content Include="imagens\print.png" />
+    <Content Include="imagens\reinstalacao.jpg" />
+    <Content Include="imagens\relatorios.jpg" />
+    <Content Include="imagens\relatorios\PagamentoServico.jpg" />
+    <Content Include="imagens\relatorios\RelOSPendente.jpg" />
+    <Content Include="imagens\reposicao.png" />
+    <Content Include="imagens\troca\buscar.jpg" />
+    <Content Include="imagens\troca\MenuTroca.jpg" />
+    <Content Include="imagens\vendas.jpg" />
+    <Content Include="imagens\ajax-loader.gif" />
+    <Content Include="imagens\delete.png" />
+    <Content Include="js\javaEstoque.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.centralize.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\kModal.js" />
+    <Content Include="js\mask.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Compras\LogPedidoCompra.aspx" />
+    <Content Include="modulos\Vendas\MeusPedidosTroca.aspx" />
+    <Content Include="modulos\Vendas\MeusPedidosVendas.aspx" />
+    <Content Include="modulos\OS\OS.aspx" />
+    <Content Include="modulos\relatorios\Relatorio.aspx" />
+    <Content Include="modulos\relatorios\RelOSPendente.aspx" />
+    <Content Include="modulos\relatorios\RelPagamentos.aspx" />
+    <Content Include="modulos\relatorios\RelVendasFranquia.aspx" />
+    <Content Include="modulos\Vendas\Troca.aspx" />
+    <Content Include="modulos\Vendas\Contratos.aspx" />
+    <Content Include="modulos\Vendas\DadosCadastrais.aspx" />
+    <Content Include="modulos\Vendas\VendasPagamentos.aspx" />
+    <Content Include="modulos\Vendas\VendasProdutos.aspx" />
+    <Content Include="modulos\Vendas\Recibo.aspx" />
+    <Content Include="Estoque\tabelas.aspx" />
+    <Content Include="modulos\Vendas\VendaVoucher.aspx" />
+    <Content Include="referencias\AjaxControlToolkit.dll" />
+    <Content Include="referencias\Boleto.Net.dll" />
+    <Content Include="referencias\CarSystem.Banco.dll" />
+    <Content Include="referencias\CarSystem.BancoDados.dll" />
+    <Content Include="referencias\CarSystem.Interfaces.dll" />
+    <Content Include="referencias\Carsystem.Tipos.dll" />
+    <Content Include="referencias\CarSystem.Utilidades.dll" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Documentos\Check_list_devolução_de_peças.pdf" />
+    <Content Include="Documentos\CREDENCIAMENTO DE TERCEIROS CENTRAL DE EMERGENCIA.pdf" />
+    <Content Include="Documentos\CARTA DE AUTORIZAÇÃO.pdf" />
+    <Content Include="Documentos\AUTORIZAÇÃO DE TRANSFERÊNCIA DE TITULARIDADE POR BEM MAIOR.pdf" />
+    <Content Include="Documentos\AUTORIZAÇÃO DE TRANSFERÊNCIA DE TITULARIDADE.pdf" />
+    <Content Include="Documentos\AUTORIZAÇÃO DE RETIRADA E TRANSFERÊNCIA.pdf" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Tecnicos.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebVendas.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="componentes\buscaCliente.ascx.cs">
+      <DependentUpon>buscaCliente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="componentes\buscaCliente.ascx.designer.cs">
+      <DependentUpon>buscaCliente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="componentes\OS\dadosCliente.ascx.cs">
+      <DependentUpon>dadosCliente.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="componentes\OS\dadosCliente.ascx.designer.cs">
+      <DependentUpon>dadosCliente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="componentes\OS\dadosClienteComplementares.ascx.cs">
+      <DependentUpon>dadosClienteComplementares.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="componentes\OS\dadosClienteComplementares.ascx.designer.cs">
+      <DependentUpon>dadosClienteComplementares.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="componentes\OS\EncerrarOs.ascx.cs">
+      <DependentUpon>EncerrarOs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="componentes\OS\EncerrarOs.ascx.designer.cs">
+      <DependentUpon>EncerrarOs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="componentes\OS\mostraOSAbertas.ascx.cs">
+      <DependentUpon>mostraOSAbertas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="componentes\OS\mostraOSAbertas.ascx.designer.cs">
+      <DependentUpon>mostraOSAbertas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="componentes\OS\OSInternaExterna.ascx.cs">
+      <DependentUpon>OSInternaExterna.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="componentes\OS\OSInternaExterna.ascx.designer.cs">
+      <DependentUpon>OSInternaExterna.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="componentes\OS\retornoCPFCNPJ.ascx.cs">
+      <DependentUpon>retornoCPFCNPJ.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="componentes\OS\retornoCPFCNPJ.ascx.designer.cs">
+      <DependentUpon>retornoCPFCNPJ.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="componentes\OS\selecionaInstalador.ascx.cs">
+      <DependentUpon>selecionaInstalador.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="componentes\OS\selecionaInstalador.ascx.designer.cs">
+      <DependentUpon>selecionaInstalador.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="componentes\OS\trocaID.ascx.cs">
+      <DependentUpon>trocaID.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="componentes\OS\trocaID.ascx.designer.cs">
+      <DependentUpon>trocaID.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\AdmFranquia.aspx.cs">
+      <DependentUpon>AdmFranquia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\AdmFranquia.aspx.designer.cs">
+      <DependentUpon>AdmFranquia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Utils.cs" />
+    <Compile Include="Compras\DetalhesPecas.aspx.cs">
+      <DependentUpon>DetalhesPecas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\DetalhesPecas.aspx.designer.cs">
+      <DependentUpon>DetalhesPecas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contrato.aspx.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contrato.aspx.designer.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dao\AcessoLogin.cs" />
+    <Compile Include="dao\Bordero\DaoBordero.cs" />
+    <Compile Include="dao\Cadastro\daoCadastro.cs" />
+    <Compile Include="dao\Chamados\daoChamados.cs" />
+    <Compile Include="dao\Chamados\daogetChamados.cs" />
+    <Compile Include="dao\Dados.cs" />
+    <Compile Include="dao\daoCarteira.cs" />
+    <Compile Include="dao\daoCompraIds.cs" />
+    <Compile Include="dao\daoCompras.cs" />
+    <Compile Include="dao\daoContrato.cs" />
+    <Compile Include="dao\daoFranquia.cs" />
+    <Compile Include="dao\daoGR.cs" />
+    <Compile Include="dao\daoIndica.cs" />
+    <Compile Include="dao\daoIndicadores.cs" />
+    <Compile Include="dao\daoPagamento.cs" />
+    <Compile Include="dao\daoPedido.cs" />
+    <Compile Include="dao\daoPedidoItens.cs" />
+    <Compile Include="dao\daoPedidoVenda.cs" />
+    <Compile Include="dao\daoPedidoVendaItens.cs" />
+    <Compile Include="dao\daoPedidoVendaPagamento.cs" />
+    <Compile Include="dao\daoPedidoVendaVeiculo.cs" />
+    <Compile Include="dao\daoProdutos.cs" />
+    <Compile Include="dao\daoRecibo.cs" />
+    <Compile Include="dao\Documentos\daoDocumentos.cs" />
+    <Compile Include="dao\Estoque\daoMovimentacao.cs" />
+    <Compile Include="dao\OS\daoConsulta.cs" />
+    <Compile Include="dao\OS\daoOSsAberta.cs" />
+    <Compile Include="dao\OS\Promocoes.cs" />
+    <Compile Include="dao\OS\resumoOS.cs" />
+    <Compile Include="dao\OS\TrocaAprovacao.cs" />
+    <Compile Include="dao\relatorios\daoRelVendas.cs" />
+    <Compile Include="dao\trocas\daoProdutoTroca.cs" />
+    <Compile Include="dao\trocas\daoTroca.cs" />
+    <Compile Include="dao\relatorios\daoRelatorioOSPendente.cs" />
+    <Compile Include="dao\relatorios\daoRelatorioPagamento.cs" />
+    <Compile Include="dao\daoRepasse.cs" />
+    <Compile Include="dao\daosetLogin.cs" />
+    <Compile Include="dao\daoSimulador.cs" />
+    <Compile Include="dao\daoVeiculo.cs" />
+    <Compile Include="dao\relatorios\daoRelatorioVendas.cs" />
+    <Compile Include="dao\Vourcher\daoVourcher.cs" />
+    <Compile Include="Estoque\detalhes.aspx.cs">
+      <DependentUpon>detalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estoque\detalhes.aspx.designer.cs">
+      <DependentUpon>detalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque\itensProtocolo.aspx.cs">
+      <DependentUpon>itensProtocolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estoque\itensProtocolo.aspx.designer.cs">
+      <DependentUpon>itensProtocolo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque\movimentacao.aspx.cs">
+      <DependentUpon>movimentacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estoque\movimentacao.aspx.designer.cs">
+      <DependentUpon>movimentacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque\protocolo.aspx.cs">
+      <DependentUpon>protocolo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estoque\protocolo.aspx.designer.cs">
+      <DependentUpon>protocolo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FranquiaCompra.aspx.cs">
+      <DependentUpon>FranquiaCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\FranquiaCompra.aspx.designer.cs">
+      <DependentUpon>FranquiaCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FranquiaEstoque.aspx.cs">
+      <DependentUpon>FranquiaEstoque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\FranquiaEstoque.aspx.designer.cs">
+      <DependentUpon>FranquiaEstoque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FranquiaPedido.aspx.cs">
+      <DependentUpon>FranquiaPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\FranquiaPedido.aspx.designer.cs">
+      <DependentUpon>FranquiaPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FranquiaVenda.aspx.cs">
+      <DependentUpon>FranquiaVenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\FranquiaVenda.aspx.designer.cs">
+      <DependentUpon>FranquiaVenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque\solicitacoes.aspx.cs">
+      <DependentUpon>solicitacoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estoque\solicitacoes.aspx.designer.cs">
+      <DependentUpon>solicitacoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\HomeCompras.aspx.cs">
+      <DependentUpon>HomeCompras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\HomeCompras.aspx.designer.cs">
+      <DependentUpon>HomeCompras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homeEstoque.aspx.cs">
+      <DependentUpon>homeEstoque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homeEstoque.aspx.designer.cs">
+      <DependentUpon>homeEstoque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="interfaces\Busca.cs" />
+    <Compile Include="modulos\Agenda\Agenda.aspx.cs">
+      <DependentUpon>Agenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Agenda\Agenda.aspx.designer.cs">
+      <DependentUpon>Agenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Agenda\funcoesAgenda.cs" />
+    <Compile Include="modulos\Chamado\Abertos.ascx.cs">
+      <DependentUpon>Abertos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\Abertos.ascx.designer.cs">
+      <DependentUpon>Abertos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Chamado\canceladas.ascx.cs">
+      <DependentUpon>canceladas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\canceladas.ascx.designer.cs">
+      <DependentUpon>canceladas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Chamado\ChamadoMethod.cs" />
+    <Compile Include="modulos\Chamado\Chamados.ascx.cs">
+      <DependentUpon>Chamados.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\Chamados.ascx.designer.cs">
+      <DependentUpon>Chamados.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Chamado\DetalhesChamados.aspx.cs">
+      <DependentUpon>DetalhesChamados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\DetalhesChamados.aspx.designer.cs">
+      <DependentUpon>DetalhesChamados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Chamado\EmAtendimento.ascx.cs">
+      <DependentUpon>EmAtendimento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\EmAtendimento.ascx.designer.cs">
+      <DependentUpon>EmAtendimento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Chamado\Encerradas.ascx.cs">
+      <DependentUpon>Encerradas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\Encerradas.ascx.designer.cs">
+      <DependentUpon>Encerradas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Chamado\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Chamado\MeusChamados.ascx.cs">
+      <DependentUpon>MeusChamados.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\MeusChamados.ascx.designer.cs">
+      <DependentUpon>MeusChamados.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Chamado\Reabertos.ascx.cs">
+      <DependentUpon>Reabertos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\Reabertos.ascx.designer.cs">
+      <DependentUpon>Reabertos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Chamado\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Chamado\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\CadastroCliente.aspx.cs">
+      <DependentUpon>CadastroCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\CadastroCliente.aspx.designer.cs">
+      <DependentUpon>CadastroCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\Cliente.aspx.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\Cliente.aspx.designer.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\Compras.aspx.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\Compras.aspx.designer.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\DebitoAutomatico.aspx.cs">
+      <DependentUpon>DebitoAutomatico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\DebitoAutomatico.aspx.designer.cs">
+      <DependentUpon>DebitoAutomatico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\Erro.aspx.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\Erro.aspx.designer.cs">
+      <DependentUpon>Erro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\IncluirObservacoesCadastro.aspx.cs">
+      <DependentUpon>IncluirObservacoesCadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\IncluirObservacoesCadastro.aspx.designer.cs">
+      <DependentUpon>IncluirObservacoesCadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\OrdemServico.aspx.cs">
+      <DependentUpon>OrdemServico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\OrdemServico.aspx.designer.cs">
+      <DependentUpon>OrdemServico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\PosicaoFinanceira.aspx.cs">
+      <DependentUpon>PosicaoFinanceira.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\PosicaoFinanceira.aspx.designer.cs">
+      <DependentUpon>PosicaoFinanceira.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\Veiculo.aspx.cs">
+      <DependentUpon>Veiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\Veiculo.aspx.designer.cs">
+      <DependentUpon>Veiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\AberturaOs.aspx.cs">
+      <DependentUpon>AberturaOs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\AberturaOs.aspx.designer.cs">
+      <DependentUpon>AberturaOs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\aprovaTroca.aspx.cs">
+      <DependentUpon>aprovaTroca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\aprovaTroca.aspx.designer.cs">
+      <DependentUpon>aprovaTroca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\Certificado.aspx.cs">
+      <DependentUpon>Certificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\Certificado.aspx.designer.cs">
+      <DependentUpon>Certificado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\DetalhesOs.aspx.cs">
+      <DependentUpon>DetalhesOs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\DetalhesOs.aspx.designer.cs">
+      <DependentUpon>DetalhesOs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\Encerramento.ashx.cs">
+      <DependentUpon>Encerramento.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\Encerrar.aspx.cs">
+      <DependentUpon>Encerrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\Encerrar.aspx.designer.cs">
+      <DependentUpon>Encerrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Cliente\EnderecoCliente.aspx.cs">
+      <DependentUpon>EnderecoCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Cliente\EnderecoCliente.aspx.designer.cs">
+      <DependentUpon>EnderecoCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\excelDownload.ashx.cs">
+      <DependentUpon>excelDownload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\funcoesResumoOS.aspx.cs">
+      <DependentUpon>funcoesResumoOS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\funcoesResumoOS.aspx.designer.cs">
+      <DependentUpon>funcoesResumoOS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\historicoEquipamento.aspx.cs">
+      <DependentUpon>historicoEquipamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\historicoEquipamento.aspx.designer.cs">
+      <DependentUpon>historicoEquipamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\impressaoOS.aspx.cs">
+      <DependentUpon>impressaoOS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\impressaoOS.aspx.designer.cs">
+      <DependentUpon>impressaoOS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\OSsAbertas.aspx.cs">
+      <DependentUpon>OSsAbertas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\OSsAbertas.aspx.designer.cs">
+      <DependentUpon>OSsAbertas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\OsServico.aspx.cs">
+      <DependentUpon>OsServico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\OsServico.aspx.designer.cs">
+      <DependentUpon>OsServico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\promocoes.aspx.cs">
+      <DependentUpon>promocoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\promocoes.aspx.designer.cs">
+      <DependentUpon>promocoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\ReciboEntrega.aspx.cs">
+      <DependentUpon>ReciboEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\ReciboEntrega.aspx.designer.cs">
+      <DependentUpon>ReciboEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\Response.cs" />
+    <Compile Include="modulos\OS\resumoOS.aspx.cs">
+      <DependentUpon>resumoOS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\resumoOS.aspx.designer.cs">
+      <DependentUpon>resumoOS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\InformacoesOS.asmx.cs">
+      <DependentUpon>InformacoesOS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\documentos.aspx.cs">
+      <DependentUpon>documentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\documentos.aspx.designer.cs">
+      <DependentUpon>documentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\Utilitario.cs" />
+    <Compile Include="modulos\Vendas\AdmBordero.aspx.cs">
+      <DependentUpon>AdmBordero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\AdmBordero.aspx.designer.cs">
+      <DependentUpon>AdmBordero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\Boleto.aspx.cs">
+      <DependentUpon>Boleto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\Boleto.aspx.designer.cs">
+      <DependentUpon>Boleto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\Bordero.aspx.cs">
+      <DependentUpon>Bordero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\Bordero.aspx.designer.cs">
+      <DependentUpon>Bordero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\CorrigirCheques.aspx.cs">
+      <DependentUpon>CorrigirCheques.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\CorrigirCheques.aspx.designer.cs">
+      <DependentUpon>CorrigirCheques.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\Informacao.aspx.cs">
+      <DependentUpon>Informacao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\Informacao.aspx.designer.cs">
+      <DependentUpon>Informacao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\Informacoes.aspx.cs">
+      <DependentUpon>Informacoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\Informacoes.aspx.designer.cs">
+      <DependentUpon>Informacoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\OS\tipoOS.aspx.cs">
+      <DependentUpon>tipoOS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\tipoOS.aspx.designer.cs">
+      <DependentUpon>tipoOS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\relatorios\GridViewGroup.cs" />
+    <Compile Include="modulos\relatorios\GridViewGroupList.cs" />
+    <Compile Include="modulos\relatorios\GridViewHelper.cs" />
+    <Compile Include="modulos\relatorios\GridViewSummary.cs" />
+    <Compile Include="modulos\relatorios\GridViewSummaryList.cs" />
+    <Compile Include="modulos\Vendas\HomeVendas.aspx.cs">
+      <DependentUpon>HomeVendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\HomeVendas.aspx.designer.cs">
+      <DependentUpon>HomeVendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\LogPedidoCompra.aspx.cs">
+      <DependentUpon>LogPedidoCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras\LogPedidoCompra.aspx.designer.cs">
+      <DependentUpon>LogPedidoCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\MeusPedidosTroca.aspx.cs">
+      <DependentUpon>MeusPedidosTroca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\MeusPedidosTroca.aspx.designer.cs">
+      <DependentUpon>MeusPedidosTroca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\MeusPedidosVendas.aspx.cs">
+      <DependentUpon>MeusPedidosVendas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\MeusPedidosVendas.aspx.designer.cs">
+      <DependentUpon>MeusPedidosVendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Estoque\funcoesEstoque.cs" />
+    <Compile Include="modulos\OS\OS.aspx.cs">
+      <DependentUpon>OS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\OS\OS.aspx.designer.cs">
+      <DependentUpon>OS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\relatorios\RelPagamentos.aspx.cs">
+      <DependentUpon>RelPagamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\relatorios\RelPagamentos.aspx.designer.cs">
+      <DependentUpon>RelPagamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\relatorios\RelVendasFranquia.aspx.cs">
+      <DependentUpon>RelVendasFranquia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\relatorios\RelVendasFranquia.aspx.designer.cs">
+      <DependentUpon>RelVendasFranquia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\Troca.aspx.cs">
+      <DependentUpon>Troca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\Troca.aspx.designer.cs">
+      <DependentUpon>Troca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\Contratos.aspx.cs">
+      <DependentUpon>Contratos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\Contratos.aspx.designer.cs">
+      <DependentUpon>Contratos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\DadosCadastrais.aspx.cs">
+      <DependentUpon>DadosCadastrais.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\DadosCadastrais.aspx.designer.cs">
+      <DependentUpon>DadosCadastrais.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\VendasPagamentos.aspx.cs">
+      <DependentUpon>VendasPagamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\VendasPagamentos.aspx.designer.cs">
+      <DependentUpon>VendasPagamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\VendasProdutos.aspx.cs">
+      <DependentUpon>VendasProdutos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\VendasProdutos.aspx.designer.cs">
+      <DependentUpon>VendasProdutos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\VendaVoucher.aspx.cs">
+      <DependentUpon>VendaVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\VendaVoucher.aspx.designer.cs">
+      <DependentUpon>VendaVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="principal.Master.cs">
+      <DependentUpon>principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="principal.Master.designer.cs">
+      <DependentUpon>principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="modulos\relatorios\Relatorio.aspx.cs">
+      <DependentUpon>Relatorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\relatorios\Relatorio.aspx.designer.cs">
+      <DependentUpon>Relatorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\relatorios\RelOSPendente.aspx.cs">
+      <DependentUpon>RelOSPendente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\relatorios\RelOSPendente.aspx.designer.cs">
+      <DependentUpon>RelOSPendente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="modulos\Vendas\Recibo.aspx.cs">
+      <DependentUpon>Recibo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modulos\Vendas\Recibo.aspx.designer.cs">
+      <DependentUpon>Recibo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque\tabelas.aspx.cs">
+      <DependentUpon>tabelas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Estoque\tabelas.aspx.designer.cs">
+      <DependentUpon>tabelas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tecnicos.aspx.cs">
+      <DependentUpon>Tecnicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tecnicos.aspx.designer.cs">
+      <DependentUpon>Tecnicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebVendas.aspx.cs">
+      <DependentUpon>WebVendas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebVendas.aspx.designer.cs">
+      <DependentUpon>WebVendas.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="principal.Master" />
+    <Content Include="packages.config" />
+    <Content Include="modulos\OS\excelDownload.ashx" />
+    <Content Include="Documentos\Autorizacao.pdf" />
+    <Content Include="Documentos\TDP_BEM_MAIOR.pdf" />
+    <Content Include="Documentos\TDP.pdf" />
+    <Content Include="Documentos\TDV_OU_RETIRADA.pdf" />
+    <Content Include="Documentos\terceiros.pdf" />
+    <Content Include="Documentos\Bloquador_Plus_Promocao.pdf" />
+    <Content Include="Documentos\checkListEmBrancoCarro.pdf" />
+    <Content Include="Documentos\checkListEmBrancoMotocicletas.pdf" />
+    <Content Include="Documentos\ContratoBloqPlus.pdf" />
+    <Content Include="Documentos\ContratoRastPlus.pdf" />
+    <Content Include="Documentos\Planilha_Para_Controle_de_Peças.xls" />
+    <Content Include="Documentos\Planilha_Para_Controle_de_Vistorias.xls" />
+    <Content Include="Documentos\POLFR 004_Política Estoque_Versão 02.pdf" />
+    <Content Include="Documentos\POLFR 005_Política Comercial Franquia Lojas_Versão 03.pdf" />
+    <Content Include="Documentos\POLFR 006_Política de Compra e Revenda_Versão 02.pdf" />
+    <Content Include="Documentos\PROFR 001_Procedimento de Atendimento Franquia Lojas_Versão 04.pdf" />
+    <Content Include="Documentos\PROFR 002_Procedimento de Atendimento Técnico_Versão 01.pdf" />
+    <Content Include="Documentos\Rastreador_Plus_Promocao.pdf" />
+    <Content Include="Documentos\Relatório_de_Perícia.pdf" />
+    <Content Include="Documentos\TermoparaDoação.pdf" />
+    <Content Include="Documentos\Termo_de_Doação.pdf" />
+    <Content Include="Documentos\Termo_de_Responsabilidade_Xenon.pdf" />
+    <Content Include="modulos\OS\Encerramento.ashx" />
+    <None Include="Properties\PublishProfiles\Sistema de Arquivos Temp.pubxml" />
+    <None Include="Properties\PublishProfiles\Warlock Dev.pubxml" />
+    <None Include="Properties\PublishProfiles\Warlock Oficial.pubxml" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54896/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

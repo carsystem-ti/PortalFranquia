@@ -1,0 +1,533 @@
+﻿.master {
+    margin: 0 auto;
+    width: 1100px;
+    float: right;
+}
+
+.menu {
+    width: 100px;
+    float: left;
+    font-size: 21.6px;
+    font-family: 'Raleway',sans-serif;
+    text-transform: uppercase;
+}
+
+/*
+body {
+    color: #72951A;
+    font-family: 'Lato',Calibri,Arial,sans-serif;
+}*/
+
+*, *:after, *:before {
+    -moz-box-sizing: border-box;
+}
+
+.vermelho {
+    background-color: #c0362c;
+}
+
+.amarelo {
+    background-color: #ffde00;
+}
+
+.verde {
+    background-color: #72951A;
+}
+
+.azul {
+    background-color: darkblue;
+}
+
+.tituloTabelas {
+    border-bottom: 3px solid darkgreen; /* #72951A;*/
+    padding-bottom: 10px;
+    text-align: right;
+    text-shadow: 2px 2px 2px #111111;
+}
+
+.tituloCaixa {
+    margin: 0;
+    padding: 0;
+    margin-right: 12px;
+    float: left;
+}
+
+.quantidadeEstoque {
+    font-size: 1.5em;
+    margin: 10px 0;
+    display: inline-block;
+    width: 80px;
+    color: white;
+    /*background-color: #72951A;*/
+    text-align: center;
+    text-shadow: 2px 2px 2px #111111;
+}
+
+.codigoEquipamento {
+    font-size: 1.5em;
+    margin: 10px 0;
+    display: inline-block;
+    width: 100px;
+    color: white;
+    background-color: #72951A;
+    text-align: center;
+}
+
+.detalheEstoque {
+    margin: 0 auto;
+    width: 300px;
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    font-weight: bolder;
+}
+
+.caixa {
+    border: 3px solid darkgreen; /* #72951A;*/
+    padding: 10px;
+    height: 200px;
+    width: 520px;
+    float: left;
+    margin: 2px;
+}
+
+.caixinha {
+    overflow-y: scroll;
+    width: 100%;
+    height: 75%;
+    background-color: white;
+}
+
+.botaoVerdeFlat {
+    background: none repeat scroll 0 0 #72951A;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    display: inline-block;
+    margin: 5px 0 0;
+    padding: 5px 10px;
+    transition: background 0.2s ease 0s;
+    text-transform: none;
+}
+
+    .botaoVerdeFlat:hover {
+        background-color: darkgreen;
+    }
+
+.botaoFlat {
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    display: inline-block;
+    margin: 5px 0 0;
+    padding: 5px 10px;
+    transition: background 0.2s ease 0s;
+    text-transform: none;
+    text-shadow: 2px 2px 2px #111111;
+}
+
+    .botaoFlat:hover {
+        background-color: darkgreen;
+    }
+
+a {
+    /*color: #F0F0F0;*/
+    text-decoration: none;
+}
+
+.caixaLeitura {
+    display: inline-block;
+}
+
+h3 {
+    display: inline-block;
+}
+
+h1 {
+    color: black;
+    text-shadow: 2px 2px 2px white;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.noVisibility {
+    visibility: hidden;
+}
+
+
+.cetec {
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    font-family: Calibri;
+    font-size: 14px;
+    height: 50px;
+    margin: 0 0 0 -2px;
+    text-align: center;
+    text-shadow: 2px 2px 2px #FFFFFF;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+.botaoVermelho {
+    -moz-box-shadow: inset 0px 1px 0px 0px #cf866c;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #cf866c;
+    box-shadow: inset 0px 1px 0px 0px #cf866c;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+    background: -moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: -webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: -o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: -ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+    background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+    background-color: #d0451b;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #942911;
+    display: inline-block;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 6px 7px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #854629;
+    width: 100px;
+    cursor: pointer;
+}
+
+    .botaoVermelho:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+        background: -moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: -webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: -o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: -ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+        background-color: #bc3315;
+    }
+
+    .botaoVermelho:active {
+        position: relative;
+        top: 1px;
+    }
+
+
+.botaoVerde {
+    -moz-box-shadow: inset 0px 1px 0px 0px #9acc85;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #9acc85;
+    box-shadow: inset 0px 1px 0px 0px #9acc85;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #74ad5a), color-stop(1, #68a54b));
+    background: -moz-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+    background: -webkit-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+    background: -o-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+    background: -ms-linear-gradient(top, #74ad5a 5%, #68a54b 100%);
+    background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#74ad5a', endColorstr='#68a54b',GradientType=0);
+    background-color: #74ad5a;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #3b6e22;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 6px 7px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #92b879;
+    width: 100px;
+    cursor: pointer;
+}
+
+    .botaoVerde:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #68a54b), color-stop(1, #74ad5a));
+        background: -moz-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+        background: -webkit-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+        background: -o-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+        background: -ms-linear-gradient(top, #68a54b 5%, #74ad5a 100%);
+        background: linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a54b', endColorstr='#74ad5a',GradientType=0);
+        background-color: #68a54b;
+    }
+
+    .botaoVerde:active {
+        position: relative;
+        top: 1px;
+    }
+
+.botaoAmarelo {
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffe0b5;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffe0b5;
+    box-shadow: inset 0px 1px 0px 0px #ffe0b5;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fbb450), color-stop(1, #f89306));
+    background: -moz-linear-gradient(top, #fbb450 5%, #f89306 100%);
+    background: -webkit-linear-gradient(top, #fbb450 5%, #f89306 100%);
+    background: -o-linear-gradient(top, #fbb450 5%, #f89306 100%);
+    background: -ms-linear-gradient(top, #fbb450 5%, #f89306 100%);
+    background: linear-gradient(to bottom, #fbb450 5%, #f89306 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbb450', endColorstr='#f89306',GradientType=0);
+    background-color: #fbb450;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #c97e1c;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 6px 7px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #8f7f24;
+    width: 100px;
+    cursor: pointer;
+}
+
+    .botaoAmarelo:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f89306), color-stop(1, #fbb450));
+        background: -moz-linear-gradient(top, #f89306 5%, #fbb450 100%);
+        background: -webkit-linear-gradient(top, #f89306 5%, #fbb450 100%);
+        background: -o-linear-gradient(top, #f89306 5%, #fbb450 100%);
+        background: -ms-linear-gradient(top, #f89306 5%, #fbb450 100%);
+        background: linear-gradient(to bottom, #f89306 5%, #fbb450 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f89306', endColorstr='#fbb450',GradientType=0);
+        background-color: #f89306;
+    }
+
+    .botaoAmarelo:active {
+        position: relative;
+        top: 1px;
+    }
+
+.botaoAzul {
+    -moz-box-shadow: inset 0px 1px 0px 0px #54a3f7;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #54a3f7;
+    box-shadow: inset 0px 1px 0px 0px #54a3f7;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+    background: -moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: -webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: -o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: -ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+    background-color: #007dc1;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #124d77;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 6px 7px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #154682;
+    width: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+    .botaoAzul:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+        background: -moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+        background: -webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+        background: -o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+        background: -ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+        background: linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+        background-color: #0061a7;
+    }
+
+    .botaoAzul:active {
+        position: relative;
+        top: 1px;
+    }
+
+
+
+
+.botaoBranco {
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+    background: -moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background: -webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background: -o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background: -ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    color: #666666;
+    font-family: arial;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+
+    .botaoBranco:hover {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+        background: -moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+        background: -webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+        background: -o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+        background: -ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+        background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+        background-color: #f6f6f6;
+    }
+
+    .botaoBranco:active {
+        position: relative;
+        top: 1px;
+    }
+
+.itemLista {
+    display: block;
+    line-height: 18px;
+    padding: 10px 12px;
+    font-weight: bold;
+    color: #555;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: Verdana;
+}
+
+    .itemLista:hover {
+        background: #f7f7f7;
+    }
+
+.numeroProtocolo {
+    width: 85px;
+    margin: 2px 12px 0 0;
+    font-size: 16px;
+    font-family: Verdana;
+    text-align: center;
+    float: left;
+}
+
+.comandoProtocolo {
+    float: right;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight:normal;
+    margin: 2px 12px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100px;
+}
+
+
+.A {
+    width: 65px;
+    margin: 2px 12px 0 0;
+    font-size: 16px;
+    font-family: Verdana;
+    text-align: center;
+    float: left;
+}
+
+.B {
+    width: 80px;
+    margin: 2px 12px 0 0;
+    font-size: 14px;
+    font-family: Verdana;
+    text-align: center;
+    float: right;
+}
+
+.identificaPeca {
+    width:90px
+}
+
+
+.itemLista > span {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    color: #999;
+}
+
+.tituloBotao {
+    font-size: 16px;
+    text-align: center;
+    width: 45px;
+}
+
+.caixaMotivos {
+    width:430px;
+    height:300px;
+    overflow-y:auto;
+}
+.botaoMotivo {
+    cursor: pointer;
+    margin: 5px;
+    padding: 15px;
+    text-align: center;
+    width: 400px;
+}
+
+.motivo-label {
+    text-transform:uppercase;
+}
+
+.botaoMotivo:checked + .motivo-label {
+    color:red;
+}
+
+.tituloOcorrencia {
+    margin-bottom: 15px;
+    margin-top: -5px;
+    text-align: center;
+}
+.caixaMotivos {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.botoesMotivo {
+    float: left;
+    font-weight: 900;
+    height: 30px;
+    margin-left: 25px;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 371px;
+}
+
+.botoesMotivoComando {
+    float: right;
+    font-weight: 900;
+    height: 30px;
+    margin-left: 25px;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.botaoMotivo {
+    display:none;
+}
+
+#script-warning {
+    display: none;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color: red;
+}

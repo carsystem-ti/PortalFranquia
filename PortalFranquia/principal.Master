@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="principal.master.cs" Inherits="PortalFranquia.principal" %>
+
+<%@ Register Src="~/componentes/buscaCliente.ascx" TagPrefix="uc1" TagName="buscaCliente" %>
+<%@ Register Src="~/componentes/OS/dadosCliente.ascx" TagPrefix="uc1" TagName="dadosCliente" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title runat="server">Portal Franquia</title>
+    <link href="css/comum.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--<script type="text/javascript" src="../../js/MaskedEditFix.js"></script>--%>
+</head>
+<body>
+    <form id="form1" runat="server">        
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering = "true" EnablePageMethods="true" ></asp:ScriptManager>
+        <%-- <asp:ToolkitScriptManager EnablePartialRendering="true" runat="server" ID="ScriptManager1" />            --%>
+        <div class="principal">
+            <div class="separadorBranco">
+            </div>
+            <div class="divCabec">
+                <div class="divInfFranquia">
+                    <asp:Label ID="lbFranquia" runat="server" Text="Label" ClientIDMode="Static">Franquia: teste</asp:Label>
+                    <br />
+                    <asp:Label ID="lbNome" runat="server" Text="Label" ClientIDMode="Static">Usuario: teste</asp:Label>
+                    <br />
+                    <asp:Label ID="lbModulo" runat="server" Text="Label" ClientIDMode="Static" Visible="false">Módulo: teste</asp:Label>
+                    <br />
+                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="lkSmall" OnClick="LinkButton1_Click" CausesValidation="false">[Sair]</asp:LinkButton>
+                    <asp:LinkButton ID="lkbtVoltar" runat="server" CssClass="lkSmall" Visible="false" OnClick="lkbtVoltar_Click" CausesValidation="false">[Voltar]</asp:LinkButton>
+                </div>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:Panel ID="pnInfAuxCabec" runat="server" CssClass="divInfAuxCabec">
+                            <uc1:buscaCliente runat="server" ID="buscaCliente" Visible="false" />
+                            <uc1:dadosCliente runat="server" ID="dadosCliente" Visible="false" />
+                        </asp:Panel>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <div class="divInfLogoCS ">
+                    <asp:Image ID="Image1" runat="server" alt="www.carsystem.com" CssClass="divLogCS" ImageUrl="~/imagens/logo300.png" />
+                </div>
+            </div>
+            <div class="separadorBranco">
+            </div>
+            <div class="separadorVerde">
+            </div>
+            <div class="divPrincipal">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

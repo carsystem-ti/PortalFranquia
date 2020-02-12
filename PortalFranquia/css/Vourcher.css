@@ -1,0 +1,68 @@
+﻿body {
+}
+
+.GridviewScrollHeader TH, .GridviewScrollHeader TD {
+    padding: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+    border-right: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    background-color: #EFEFEF;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.GridviewScrollItem TD {
+    padding: 5px;
+    white-space: nowrap;
+    border-right: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+    background-color: #FFFFFF;
+}
+
+.GridviewScrollPager {
+    border-top: 1px solid #AAAAAA;
+    background-color: #666666;
+}
+
+    .GridviewScrollPager TD {
+        padding-top: 3px;
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .GridviewScrollPager A {
+        color: #989393;
+        color: #acaaaa;
+    }
+
+    .GridviewScrollPager SPAN {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+td {
+    background-color: #ea8511;
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 2px;
+    color: black;
+}
+
+th {
+    border-color: #666666;
+    border-style: none;
+    border-width: 2px;
+}
+
+
+label {
+    font-weight: bold;
+    color: black;
+    font-family: Arial,Verdana,Vrinda;
+}
+.table-overflow {
+    max-height:400px;
+    overflow-y:auto;
+}

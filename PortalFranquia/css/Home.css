@@ -1,0 +1,41 @@
+﻿.linhaMenu {
+    display: inline-block;
+    width: 100%;
+    margin-left: 0%;
+    text-align: center;  
+    font-size: x-large;
+    font-weight: 500;  
+}
+
+    .linhaMenu div {
+        width: 24%;
+        float: left;
+        height: 207px;
+}
+
+        .linhaMenu div:hover {
+            border: dotted;
+            border-width: 1px;
+            border-color: green;
+            background-color: #E2FFCC;
+        }
+
+        .linhaMenu div .linkMenu {
+            margin-left: 5px;
+            font-size: x-large;
+            font-weight: 500;
+        }
+
+    .linhaMenu a:link {
+        font-style: normal;
+        text-decoration: none;
+        color: black;
+    }
+
+    .linhaMenu a:visited {
+        color: black;
+    }
+
+    .linhaMenu a img {
+        border: none;
+    }

@@ -1,0 +1,22 @@
+﻿.desabilitaLink {
+    color: gray;
+}
+
+.corpo {
+    width: 1220px;
+}
+
+.rodape {
+    position: absolute;
+    bottom: 5px;
+    width: 1220px;  
+    display:inline-block;         
+}
+
+.somenteNumero {
+}
+
+td, th {
+    /*font-size: medium;    */
+    font-weight: bold;
+}

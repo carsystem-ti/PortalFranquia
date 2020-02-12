@@ -1,0 +1,59 @@
+﻿.divAzulTitulo {
+    color: #FFFF00;
+    font-weight: bold;
+    text-align: center;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.Analitico td {
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    font-size: small;
+    font-family:Verdana;
+}
+
+.AnaliticoHeader th {
+    background-color: #002060;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    font-size: small;
+    font-family:Verdana;
+}
+
+.AnaliticoFooter td {
+    background-color: #002060;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: white;
+    font-size: small;
+    font-family:Verdana;
+}
+
+.ModalBackground {
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    z-index: 50000;
+    float:left;
+    border: 2px solid #59B0B9;
+    background-color: #DEEFF1;
+    color:#DEEFF1;
+}
+
+.ModalPopup {
+    background-color: #DEEFF1;
+    border-width: 6px;
+    border-style: solid;
+    border-color:  #59B0B9;
+    padding: 15px;
+    width: 40%;
+    height: 30%;
+    color:#DEEFF1;
+    float:left;
+}

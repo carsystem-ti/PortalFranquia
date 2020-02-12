@@ -1,0 +1,107 @@
+﻿.SubTotalRowStyle{
+    border:solid 1px Black;
+    background-color:#59B0B9;
+    font-weight:bold;
+}
+.FirstCellSubTotalRowStyle {
+    border:solid 1px Black;
+    background-color:#59B0B9;
+    font-weight:bold;
+}
+.GrandTotalRowStyle{
+    border:solid 1px Black;  
+    background-color:Gray;
+    font-weight:bold;
+}   
+.DataCell
+{
+    border:solid 1px Black;
+}
+.ExpandCollapseStyle {
+    border:0px;
+    cursor:pointer;
+    padding-left:3px;
+    padding-right:5px;
+    width:12px;
+    height:12px;
+}
+.Aceite {
+}
+
+body 
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.PnlFundo
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.FundoTransparente
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+	z-index: 1;
+}
+
+.PnlConteudo
+{
+    position: absolute;
+    width: 900px;
+    height: 400px;
+    left: -450px;
+    margin-left: 50%;
+    top: 40%;
+    margin-top: -150px;
+    border: 2px solid #ff001f;
+    background-color:  #59B0B9;
+    padding: 15px;
+    z-index: 10;
+}
+
+.PnlConteudo input[type=submit]
+{
+    position: absolute;
+    padding: 10px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background-color: #59B0B9;
+    border: 2px solid #59B0B9;
+    color: #666;
+    font-weight: bold;
+}
+
+.PnlConteudo input[type=submit]:hover
+{
+    position: absolute;
+    background-color: #59B0B9;
+    border: 2px solid #111;
+    color: #59B0B9;
+    font-weight: bold;
+}
+.descricao {
+    float:left;
+    margin-left:50%;
+    margin-right:50px;
+
+}
+#dadosCheques {
+    float:left;
+    margin-right:20%;
+    
+}
+#cmc7 {
+        float:left;
+    margin-left:50%;
+    margin-top:-9%;
+}

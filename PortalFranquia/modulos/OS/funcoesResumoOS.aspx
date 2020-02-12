@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="funcoesResumoOS.aspx.cs" Inherits="PortalFranquia.modulos.OS.funcoesResumoOS" %>

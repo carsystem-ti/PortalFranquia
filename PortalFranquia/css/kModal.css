@@ -1,0 +1,80 @@
+﻿.box {
+    background: #fff;
+    border: 3px solid gray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: 25px;
+    padding: 30px;
+    z-index: 501;
+}
+
+.boxLoading {
+    z-index: 601;
+}
+
+.box2 {
+    z-index: 502;
+}
+
+.modal-overlay {
+    /*display: none;*/
+    background-color: lightgrey;
+    opacity: 0.8;
+    height: 300%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 300%;
+    z-index: 500;
+}
+
+.modal-overlay-loading {
+    /*display: none;*/
+    background-color: lightgrey;
+    opacity: 0.8;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 600;
+}
+
+.modalCloseImg {
+    background: url(../imagens/delete.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline;
+    z-index: 3200;
+    position: absolute;
+    top: -22px;
+    right: -15px;
+    cursor: pointer;
+}
+.modalPrintImg {
+    background: url(../imagens/print.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline;
+    z-index: 3200;
+    position: absolute;
+    top: -22px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.modalEmailImg {
+    background: url(../imagens/new_mail.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline;
+    z-index: 3200;
+    position: absolute;
+    top: -22px;
+    right: 56px;
+    cursor: pointer;
+}
+.loading{
+    background: url(../imagens/ajax-loader.gif) no-repeat;
+	height: 150px;
+    width: 214px;	
+}

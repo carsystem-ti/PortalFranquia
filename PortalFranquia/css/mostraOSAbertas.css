@@ -1,0 +1,17 @@
+﻿td {
+    background-color: #DEEFF1;
+    /*border-color: #4bb1ec;
+    border-style: solid;
+    border-width: 3px;
+    color: black;*/
+    font-size: small;
+}
+
+th {
+    border-width: 2px;
+    /*border-color: black;
+    border-style: none;
+    text-align: left;*/
+    font-weight: 400;
+}
+
